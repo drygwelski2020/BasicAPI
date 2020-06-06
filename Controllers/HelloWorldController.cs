@@ -1,4 +1,5 @@
 
+using System;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BasicAPI.Controllers
@@ -20,7 +21,7 @@ namespace BasicAPI.Controllers
         public string SayHello()
         {
             // This is the response
-            return "Hello, World!";
+            return $"Hello, World! It is currently {DateTime.Now}. Have a great day.";
         }
     }
 }
