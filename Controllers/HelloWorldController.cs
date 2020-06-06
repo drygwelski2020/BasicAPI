@@ -18,16 +18,16 @@ namespace BasicAPI.Controllers
         // If you do GET https://localhost:5001/HelloWorld
         // you'll get *THIS* code
         [HttpGet]
-        public string SayHello(string who)
+        public string SayHello(string who = "World")
         {
             // This is the response
             // string whoOrWorld;
 
 
             // If whoOrWorld is null, use "World". Otherwise, use the query response from the user
-            string whoOrWorld = who == null ? "World" : who;
+            //string whoOrWorld = who == null ? "World" : who;
 
-            return $"Hello {whoOrWorld}! It is currently {DateTime.Now}. Have a great day.";
+            return $"Hello {who}! It is currently {DateTime.Now}. Have a great day.";
         }
     }
 }
